@@ -1,12 +1,14 @@
 .logo {
-    top: 200px;
-    right: 190px;
+    top: 185px;
+    right: 926px;
 }
 
-.custom {
-    top: 200px;
-    right: 200px;
+@media (min-width:640px) {
+    .custom {
+        right: 280px;
+    }
 }
+
 
 .custom-desktop {
     top: 275px;

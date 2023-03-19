@@ -1,10 +1,27 @@
 import { createBrowserRouter } from "react-router-dom";
-import Main from "../Pages/MainLayout/Main";
+import MainLayout from "../Main/MainLayout";
+import Register from "../Pages/RegisterPages/Register";
+import SuccessPage from "../SuccessPage/SuccessPage";
+import Verification from "../Verification/Verification";
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Main></Main>
+        element: <MainLayout></MainLayout>,
+        children: [
+            {
+                path: "/",
+                element: <Register></Register>
+            },
+            {
+                path: "/verification",
+                element: <Verification></Verification>
+            },
+            {
+                path: "/success",
+                element: <SuccessPage></SuccessPage>
+            }
+        ]
     }
 ]);
 export default router;
